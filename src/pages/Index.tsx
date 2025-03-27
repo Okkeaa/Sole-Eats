@@ -8,7 +8,7 @@ const Index: React.FC = () => {
       <header>
         <div className="container">
           <nav>
-            <div className="logo">MyPortfolio</div>
+            <div className="logo">Patrick Josh C. Musni</div>
             <ul className="nav-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#people">People</a></li>
@@ -132,7 +132,7 @@ const Index: React.FC = () => {
       <footer>
         <div className="container">
           <div className="footer-content">
-            <div className="logo">MyPortfolio</div>
+            <div className="logo">Patrick Josh C. Musni</div>
             <p className="footer-text">© 2023 Student Portfolio. San Beda College Alabang.</p>
           </div>
         </div>
