@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SoloEats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="navbar-logo">
+          <span class="glow-text">SOLO</span>EATS
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="personalize.html" class="nav-link">Personalize</a>
+          <a href="about.html" class="nav-link active-nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="solo-button">Order Now</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="personalize.html" class="nav-link">Personalize</a>
+        <a href="about.html" class="nav-link active-nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="solo-button w-full">Order Now</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="about-section py-24">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Image Section -->
+          <div class="about-image-container">
+            <!-- Main Image -->
+            <div class="main-image">
+              <img src="/lovable-uploads/0f972704-75e9-44d3-b2e8-e6be726f759e.png" alt="Chef">
+              <div class="image-overlay"></div>
+            </div>
+            
+            <!-- Kitchen Image -->
+            <div class="kitchen-image">
+              <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04" alt="Kitchen">
+            </div>
+            
+            <!-- Decorative Image -->
+            <div class="decorative-image top-right">
+              <img src="https://images.unsplash.com/photo-1551218372-a8789b81b253" alt="Food close-up">
+            </div>
+            
+            <!-- Purple Accent Border -->
+            <div class="purple-border"></div>
+          </div>
+          
+          <!-- Content Section -->
+          <div class="about-content">
+            <div class="about-badge">
+              <i class="fas fa-hat-chef chef-hat-icon"></i>
+              <span>Our Story</span>
+            </div>
+            
+            <h2 class="about-title">
+              The <span class="glow-text">Vision</span> Behind SoloEats
+            </h2>
+            
+            <p class="about-text">
+              Founded by award-winning chef Alex Morgan, SoloEats was born from a passion for creating extraordinary culinary experiences that tell a story through flavor. Inspired by the aesthetic and philosophy of Solo Leveling, we believe every meal should be a journey of discovery.
+            </p>
+            
+            <p class="about-text">
+              Our team of culinary artisans works tirelessly to craft dishes that not only tantalize your taste buds but create memorable experiences. We source the finest ingredients and employ innovative techniques to ensure each plate served is nothing short of exceptional.
+            </p>
+            
+            <div class="feature-grid">
+              <div class="feature-card">
+                <i class="fas fa-award feature-icon"></i>
+                <h3 class="feature-title">Premium Quality</h3>
+                <p class="feature-text">We source only the finest ingredients for exceptional flavor.</p>
+              </div>
+              
+              <div class="feature-card">
+                <i class="fas fa-utensils feature-icon"></i>
+                <h3 class="feature-title">Artisanal Craft</h3>
+                <p class="feature-text">Each dish is meticulously prepared with passion and precision.</p>
+              </div>
+              
+              <div class="feature-card">
+                <i class="fas fa-hat-chef feature-icon"></i>
+                <h3 class="feature-title">Expert Chefs</h3>
+                <p class="feature-text">Our culinary team brings years of expertise and creativity.</p>
+              </div>
+            </div>
+            
+            <a href="contact.html" class="solo-button">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="purple-line"></div>
+    
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Logo & About -->
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span class="glow-text">SOLO</span>EATS
+          </a>
+          <p class="footer-about">
+            Experience personalized culinary journeys crafted exclusively for your taste. Every meal unlocks a new level of flavor.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu</a></li>
+            <li><a href="personalize.html" class="footer-link">Personalization</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h3 class="footer-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Cookie Policy</a></li>
+            <li><a href="#" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div>
+          <h3 class="footer-title">Subscribe</h3>
+          <p class="footer-text">Stay updated with our latest offerings and promotions.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="solo-button w-full">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> SoloEats. All rights reserved.
+        </p>
+        
+        <button id="scroll-top" class="scroll-top-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('show');
+    });
+    
+    // Scroll to top functionality
+    document.getElementById('scroll-top').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

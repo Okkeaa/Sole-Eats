@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalize - SoloEats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="navbar-logo">
+          <span class="glow-text">SOLO</span>EATS
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="personalize.html" class="nav-link active-nav-link">Personalize</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="solo-button">Order Now</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="personalize.html" class="nav-link active-nav-link">Personalize</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="solo-button w-full">Order Now</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="personalize-section">
+    <div class="container py-16" style="padding-top: 7rem;">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center justify-center mb-4 bg-solo-purple/20 px-4 py-2 rounded-full" style="display: inline-flex; align-items: center; justify-content: center; background-color: rgba(139, 92, 246, 0.2); padding: 0.5rem 1rem; border-radius: 9999px; margin-bottom: 1rem;">
+          <i class="fas fa-sliders-h" style="color: var(--solo-purple-light); margin-right: 0.5rem;"></i>
+          <span style="color: var(--solo-purple-light); font-family: 'Rajdhani', sans-serif;">Personalize Your Experience</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+          <span class="glow-text">Customize</span> Your Culinary Journey
+        </h2>
+        <p style="color: #d1d5db; max-width: 700px; margin: 0 auto 2rem auto;">
+          Tell us your preferences and dietary needs, and we'll craft the perfect meal recommendations just for you.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 800px; margin: 0 auto;">
+        <div class="preference-form">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Your Taste Profile</h3>
+
+          <form id="preference-form">
+            <!-- Spice Level -->
+            <div class="range-container">
+              <label class="block text-white mb-2 font-solo" style="display: block; margin-bottom: 0.5rem; font-family: 'Rajdhani', sans-serif;">Spice Level</label>
+              <input 
+                type="range" 
+                min="1" 
+                max="5" 
+                value="3" 
+                id="spice-level"
+                class="range-slider"
+              >
+              <div class="range-labels">
+                <span>Mild</span>
+                <span>Medium</span>
+                <span>Hot</span>
+              </div>
+            </div>
+
+            <!-- Flavor Profile -->
+            <div class="select-container">
+              <label class="block text-white mb-2 font-solo" style="display: block; margin-bottom: 0.5rem; font-family: 'Rajdhani', sans-serif;">Flavor Preference</label>
+              <select id="flavor-profile" class="custom-select">
+                <option value="savory">Savory</option>
+                <option value="sweet">Sweet</option>
+                <option value="spicy">Spicy</option>
+                <option value="umami">Umami</option>
+                <option value="tangy">Tangy</option>
+              </select>
+            </div>
+
+            <!-- Dietary Restrictions -->
+            <div style="margin-bottom: 1.5rem;">
+              <label class="block text-white mb-2 font-solo" style="display: block; margin-bottom: 0.5rem; font-family: 'Rajdhani', sans-serif;">Dietary Restrictions</label>
+              <div class="checkbox-grid">
+                <div class="checkbox-item" onclick="toggleDietary(this, 'vegetarian')">
+                  <i class="far fa-circle" id="icon-vegetarian"></i>
+                  <span>Vegetarian</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleDietary(this, 'vegan')">
+                  <i class="far fa-circle" id="icon-vegan"></i>
+                  <span>Vegan</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleDietary(this, 'gluten-free')">
+                  <i class="far fa-circle" id="icon-gluten-free"></i>
+                  <span>Gluten-Free</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleDietary(this, 'dairy-free')">
+                  <i class="far fa-circle" id="icon-dairy-free"></i>
+                  <span>Dairy-Free</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleDietary(this, 'nut-free')">
+                  <i class="far fa-circle" id="icon-nut-free"></i>
+                  <span>Nut-Free</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleDietary(this, 'low-carb')">
+                  <i class="far fa-circle" id="icon-low-carb"></i>
+                  <span>Low-Carb</span>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="solo-button w-full" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+              Get Recommendations <i class="fas fa-chevron-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="purple-line"></div>
+    
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Logo & About -->
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span class="glow-text">SOLO</span>EATS
+          </a>
+          <p class="footer-about">
+            Experience personalized culinary journeys crafted exclusively for your taste. Every meal unlocks a new level of flavor.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu</a></li>
+            <li><a href="personalize.html" class="footer-link">Personalization</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h3 class="footer-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Cookie Policy</a></li>
+            <li><a href="#" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div>
+          <h3 class="footer-title">Subscribe</h3>
+          <p class="footer-text">Stay updated with our latest offerings and promotions.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="solo-button w-full">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> SoloEats. All rights reserved.
+        </p>
+        
+        <button id="scroll-top" class="scroll-top-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('show');
+    });
+    
+    // Dietary restriction toggle
+    let selectedDietary = [];
+    
+    function toggleDietary(element, value) {
+      if (selectedDietary.includes(value)) {
+        // Remove from selected
+        selectedDietary = selectedDietary.filter(item => item !== value);
+        element.classList.remove('selected');
+        document.getElementById(`icon-${value}`).className = 'far fa-circle';
+      } else {
+        // Add to selected
+        selectedDietary.push(value);
+        element.classList.add('selected');
+        document.getElementById(`icon-${value}`).className = 'fas fa-check-circle';
+      }
+    }
+    
+    // Form submission
+    document.getElementById('preference-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const spiceLevel = document.getElementById('spice-level').value;
+      const flavorProfile = document.getElementById('flavor-profile').value;
+      
+      alert(`Thank you for submitting your preferences! We'll use your spice level (${spiceLevel}/5), flavor profile (${flavorProfile}), and dietary restrictions to create personalized recommendations for you.`);
+    });
+    
+    // Scroll to top functionality
+    document.getElementById('scroll-top').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

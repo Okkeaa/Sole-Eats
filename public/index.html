@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoloEats - Personalized Culinary Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="navbar-logo">
+          <span class="glow-text">SOLO</span>EATS
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <a href="index.html" class="nav-link active-nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="personalize.html" class="nav-link">Personalize</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button class="solo-button">Order Now</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <a href="index.html" class="nav-link active-nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="personalize.html" class="nav-link">Personalize</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="solo-button w-full">Order Now</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- Background Effect -->
+      <div class="bg-effect">
+        <div class="purple-blob" style="top: 25%; left: 25%;"></div>
+        <div class="purple-blob" style="bottom: 25%; right: 25%;"></div>
+      </div>
+
+      <div class="container">
+        <div class="flex flex-col items-center" style="display: flex; flex-direction: column; gap: 3rem;">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Every meal unlocks a 
+              <span class="glow-text">new level of flavor.</span>
+            </h1>
+            <p class="text-lg text-gray-300 mb-8" style="color: #d1d5db; max-width: 700px; margin: 0 auto 2rem auto;">
+              Experience personalized culinary journeys crafted exclusively for your taste. Elevate your dining experience with our Solo Leveling inspired cuisine.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+              <a href="personalize.html" class="solo-button animate-glow" style="display: flex; align-items: center; gap: 0.5rem;">
+                Personalize Your Menu <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="menu.html" class="solo-button" style="background-color: transparent; border: 1px solid var(--solo-purple); color: var(--solo-purple-light);">
+                Explore Our Dishes
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image-container">
+            <!-- Owner Image with Purple Overlay/Lighting Effect -->
+            <div class="hero-image">
+              <img src="/lovable-uploads/0f972704-75e9-44d3-b2e8-e6be726f759e.png" alt="Chef">
+              <div class="image-overlay"></div>
+            </div>
+            
+            <!-- Decorative Border -->
+            <div style="position: absolute; inset: 0; border: 2px solid rgba(139, 92, 246, 0.5); border-radius: 0.75rem; transform: translate(1rem, 1rem);"></div>
+            
+            <!-- Glowing Corner Accents -->
+            <div style="position: absolute; top: 0; left: 0; width: 2.5rem; height: 2.5rem; border-top: 2px solid var(--solo-purple); border-left: 2px solid var(--solo-purple); border-top-left-radius: 0.75rem;"></div>
+            <div style="position: absolute; top: 0; right: 0; width: 2.5rem; height: 2.5rem; border-top: 2px solid var(--solo-purple); border-right: 2px solid var(--solo-purple); border-top-right-radius: 0.75rem;"></div>
+            <div style="position: absolute; bottom: 0; left: 0; width: 2.5rem; height: 2.5rem; border-bottom: 2px solid var(--solo-purple); border-left: 2px solid var(--solo-purple); border-bottom-left-radius: 0.75rem;"></div>
+            <div style="position: absolute; bottom: 0; right: 0; width: 2.5rem; height: 2.5rem; border-bottom: 2px solid var(--solo-purple); border-right: 2px solid var(--solo-purple); border-bottom-right-radius: 0.75rem;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Section -->
+    <section class="food-section py-16">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+            <span class="glow-text">Featured</span> Dishes
+          </h2>
+          <p style="color: #d1d5db; max-width: 700px; margin: 0 auto 2rem auto; font-size: 1.125rem;">
+            Our chef-crafted specialties inspired by the world of Solo Leveling. Each dish is designed to take your taste buds on an extraordinary journey.
+          </p>
+        </div>
+
+        <!-- Category Filter -->
+        <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
+          <div style="display: inline-flex; background-color: var(--solo-card); border-radius: 0.5rem; padding: 0.25rem; border: 1px solid rgba(139, 92, 246, 0.2);">
+            <button onclick="filterFood('all')" class="food-filter-btn active" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-family: 'Rajdhani', sans-serif; font-weight: 500; transition: all 0.3s;">
+              All
+            </button>
+            <button onclick="filterFood('main')" class="food-filter-btn" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-family: 'Rajdhani', sans-serif; font-weight: 500; transition: all 0.3s;">
+              Main
+            </button>
+            <button onclick="filterFood('beverage')" class="food-filter-btn" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-family: 'Rajdhani', sans-serif; font-weight: 500; transition: all 0.3s;">
+              Beverages
+            </button>
+            <button onclick="filterFood('dessert')" class="food-filter-btn" style="padding: 0.5rem 1rem; border-radius: 0.375rem; font-family: 'Rajdhani', sans-serif; font-weight: 500; transition: all 0.3s;">
+              Desserts
+            </button>
+          </div>
+        </div>
+
+        <!-- Food Grid -->
+        <div class="food-grid">
+          <!-- Food Card 1 -->
+          <div class="food-card" data-category="main">
+            <div class="food-image">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Monarch's Feast">
+              <div class="food-price">$32.99</div>
+            </div>
+            <div class="food-content">
+              <h3 class="food-title">Monarch's Feast</h3>
+              <p class="food-description">A royal dish featuring premium-grade ribeye steak served with truffle-infused mashed potatoes and seasonal vegetables.</p>
+              <div class="food-tags">
+                <span class="food-tag">protein-rich</span>
+                <span class="food-tag">gourmet</span>
+                <span class="food-tag">savory</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="solo-button w-full">Add to Order</button>
+                <button style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; background-color: var(--solo-card); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 0.25rem; color: var(--solo-purple-light);">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Food Card 2 -->
+          <div class="food-card" data-category="main">
+            <div class="food-image">
+              <img src="https://images.unsplash.com/photo-1623341214825-9f4f963727da" alt="Shadow Ramen">
+              <div class="food-price">$18.99</div>
+            </div>
+            <div class="food-content">
+              <h3 class="food-title">Shadow Ramen</h3>
+              <p class="food-description">Black garlic tonkotsu broth with char siu pork, ajitama egg, and house-made noodles in a rich, umami-packed bowl.</p>
+              <div class="food-tags">
+                <span class="food-tag">warm</span>
+                <span class="food-tag">umami</span>
+                <span class="food-tag">comfort-food</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="solo-button w-full">Add to Order</button>
+                <button style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; background-color: var(--solo-card); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 0.25rem; color: var(--solo-purple-light);">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Food Card 3 -->
+          <div class="food-card" data-category="beverage">
+            <div class="food-image">
+              <img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7" alt="Mana Potion">
+              <div class="food-price">$8.99</div>
+            </div>
+            <div class="food-content">
+              <h3 class="food-title">Mana Potion</h3>
+              <p class="food-description">Revitalizing blueberry and blackberry smoothie with banana, protein, and a hint of lavender, topped with chia seeds.</p>
+              <div class="food-tags">
+                <span class="food-tag">refreshing</span>
+                <span class="food-tag">sweet</span>
+                <span class="food-tag">energizing</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="solo-button w-full">Add to Order</button>
+                <button style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; background-color: var(--solo-card); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 0.25rem; color: var(--solo-purple-light);">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="menu.html" class="solo-button animate-glow">
+            View Full Menu
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Preview) -->
+    <section class="about-section py-16">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+            Our <span class="glow-text">Story</span>
+          </h2>
+          <p style="color: #d1d5db; max-width: 700px; margin: 0 auto 2rem auto;">
+            Founded by award-winning chef Alex Morgan, SoloEats was born from a passion for creating extraordinary culinary experiences that tell a story through flavor.
+          </p>
+          <a href="about.html" class="solo-button">Learn More About Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="purple-line"></div>
+    
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Logo & About -->
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span class="glow-text">SOLO</span>EATS
+          </a>
+          <p class="footer-about">
+            Experience personalized culinary journeys crafted exclusively for your taste. Every meal unlocks a new level of flavor.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu</a></li>
+            <li><a href="personalize.html" class="footer-link">Personalization</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h3 class="footer-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Cookie Policy</a></li>
+            <li><a href="#" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div>
+          <h3 class="footer-title">Subscribe</h3>
+          <p class="footer-text">Stay updated with our latest offerings and promotions.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="solo-button w-full">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> SoloEats. All rights reserved.
+        </p>
+        
+        <button id="scroll-top" class="scroll-top-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('show');
+    });
+
+    // Food filtering
+    function filterFood(category) {
+      const foodCards = document.querySelectorAll('.food-card');
+      const filterButtons = document.querySelectorAll('.food-filter-btn');
+      
+      // Update active button
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.backgroundColor = 'transparent';
+        btn.style.color = '#a0aec0';
+      });
+      
+      event.target.classList.add('active');
+      event.target.style.backgroundColor = 'var(--solo-purple)';
+      event.target.style.color = 'white';
+      
+      // Filter food cards
+      foodCards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    
+    // Initialize active filter button
+    document.querySelector('.food-filter-btn').style.backgroundColor = 'var(--solo-purple)';
+    document.querySelector('.food-filter-btn').style.color = 'white';
+    
+    // Scroll to top functionality
+    document.getElementById('scroll-top').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

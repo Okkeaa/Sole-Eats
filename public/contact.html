@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - SoloEats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="navbar-logo">
+          <span class="glow-text">SOLO</span>EATS
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="personalize.html" class="nav-link">Personalize</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link active-nav-link">Contact</a>
+          <button class="solo-button">Order Now</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="personalize.html" class="nav-link">Personalize</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active-nav-link">Contact</a>
+        <button class="solo-button w-full">Order Now</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="contact" class="contact-section py-16" style="padding-top: 7rem;">
+      <div class="container">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center justify-center mb-4 bg-solo-purple/20 px-4 py-2 rounded-full" style="display: inline-flex; align-items: center; justify-content: center; background-color: rgba(139, 92, 246, 0.2); padding: 0.5rem 1rem; border-radius: 9999px; margin-bottom: 1rem;">
+            <i class="fas fa-comment" style="color: var(--solo-purple-light); margin-right: 0.5rem;"></i>
+            <span style="color: var(--solo-purple-light); font-family: 'Rajdhani', sans-serif;">Get In Touch</span>
+          </div>
+          
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+            <span class="glow-text">Contact</span> Us
+          </h2>
+          
+          <p style="color: #d1d5db; max-width: 700px; margin: 0 auto 2rem auto; font-size: 1.125rem;">
+            Have questions or special requests? We'd love to hear from you. Reach out and our team will respond as soon as possible.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; font-family: 'Rajdhani', sans-serif; font-weight: 700;">Send Us a Message</h3>
+            
+            <form id="contact-form" class="space-y-6">
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Enter your name"
+                  required
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Enter your email"
+                  required
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="What is this regarding?"
+                  required
+                >
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="form-textarea"
+                  placeholder="Type your message here..."
+                  required
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit"
+                class="solo-button w-full"
+                style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;"
+              >
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+          
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3 style="font-size: 1.5rem; margin-bottom: 2rem; font-family: 'Rajdhani', sans-serif; font-weight: 700;">Contact Information</h3>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Our Location</h3>
+                <p>
+                  123 Solo Street, Leveling District<br>
+                  San Francisco, CA 94103
+                </p>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h3>Email Us</h3>
+                <p>
+                  info@soloeats.com<br>
+                  reservations@soloeats.com
+                </p>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Call Us</h3>
+                <p>
+                  +1 (555) 123-4567<br>
+                  +1 (555) 987-6543
+                </p>
+              </div>
+            </div>
+            
+            <!-- Business Hours -->
+            <div style="background-color: var(--solo-card); border-radius: 0.5rem; padding: 1.5rem; border: 1px solid rgba(139, 92, 246, 0.2); margin-top: 2.5rem;">
+              <h4 style="font-size: 1.25rem; margin-bottom: 1rem; font-family: 'Rajdhani', sans-serif; font-weight: 600;">Business Hours</h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: #a0aec0;">Monday - Thursday</span>
+                  <span style="font-weight: 500;">11:00 AM - 10:00 PM</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: #a0aec0;">Friday - Saturday</span>
+                  <span style="font-weight: 500;">11:00 AM - 11:00 PM</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span style="color: #a0aec0;">Sunday</span>
+                  <span style="font-weight: 500;">12:00 PM - 9:00 PM</span>
+                </div>
+              </div>
+              
+              <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(139, 92, 246, 0.2);">
+                <p style="color: var(--solo-purple-light); font-size: 0.875rem; font-family: 'Rajdhani', sans-serif;">
+                  * Special hours may apply on holidays
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="purple-line"></div>
+    
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Logo & About -->
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span class="glow-text">SOLO</span>EATS
+          </a>
+          <p class="footer-about">
+            Experience personalized culinary journeys crafted exclusively for your taste. Every meal unlocks a new level of flavor.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="menu.html" class="footer-link">Menu</a></li>
+            <li><a href="personalize.html" class="footer-link">Personalization</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Legal -->
+        <div>
+          <h3 class="footer-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Cookie Policy</a></li>
+            <li><a href="#" class="footer-link">Accessibility</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div>
+          <h3 class="footer-title">Subscribe</h3>
+          <p class="footer-text">Stay updated with our latest offerings and promotions.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="solo-button w-full">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year"></span> SoloEats. All rights reserved.
+        </p>
+        
+        <button id="scroll-top" class="scroll-top-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('show');
+    });
+    
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      alert('Thank you for your message! We will get back to you soon.');
+      
+      // Reset form
+      this.reset();
+    });
+    
+    // Scroll to top functionality
+    document.getElementById('scroll-top').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
